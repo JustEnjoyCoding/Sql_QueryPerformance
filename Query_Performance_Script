@@ -1,15 +1,34 @@
 This code is used to check statics on table :
 
-sp_helpstats N'Employee','ALL'
+sp_helpstats N'Employee','ALL'   // This code is used to check all statics object exists on table Employee
 
-------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This code is used to set table statistics on or off:
+
+generally this code is used to check logic read , physical read 
 
 set STATISTICS io ON
 
 set STATISTICS io OFF
 
---------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+This code is used to create or set statistics object of table or on spefic columb
+
+EXEC sp_autostats 'dbo.Employee';  // This code is used to check autostats is enabled or not
+
+EXEC sp_autostats 'dbo.Employee', 'ON'   //  This code is used to on autostats of table dbo.Employee
+
+EXEC sp_autostats 'dbo.Employee', 'OFF'  //  This code is used to off autostats of table dbo.Employee
+
+EXEC sp_autostats 'dbo.Employee', 'ON', PK__Employee__3214EC27826760CD;   //  This code is used to on autostats  with specific static object name
+
+EXEC sp_autostats 'dbo.Employee', 'OFF', PK__Employee__3214EC27826760CD;    //  This code is used to off autostats  with specific static object name
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 
             
