@@ -1,1 +1,15 @@
+This code is used to check statics on table :
 
+sp_helpstats N'Employee','ALL'
+
+------------------------------------------------------------------
+
+This code is used to set table statistics on or off:
+
+set STATISTICS io ON
+
+set STATISTICS io OFF
+
+--------------------------------------------------------------------
+
+            
