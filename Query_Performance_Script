@@ -28,9 +28,11 @@ EXEC sp_autostats 'dbo.Employee', 'OFF', PK__Employee__3214EC27826760CD;    //  
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This command is used to check sql pages of table 
+This command is used to check how many sql pages associated with sql table (Employee) of database (DailySqlStudy)
 
 DBCC IND('DailySqlStudy',Employee,-1)
+
+This command is used to data of pageid (282) :
 
 DBCC TRACEON(3604)
 DBCC PAGE('DailySqlStudy',1,282,1)
